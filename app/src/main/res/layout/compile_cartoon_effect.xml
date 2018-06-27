@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+    <RadioGroup
+        android:id="@+id/rg_compile_cartoon_effect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/effect_background"
+            style="@style/compile_cartoon_scene_rb"
+            android:text="@string/background"/>
+
+        <RadioButton
+            android:id="@+id/effect_image"
+            style="@style/compile_cartoon_scene_rb"
+            android:text="@string/scene"/>
+
+        <RadioButton
+            android:id="@+id/effect_role"
+            style="@style/compile_cartoon_scene_rb"
+            android:text="@string/role"/>
+
+        <RadioButton
+            android:id="@+id/effect_current"
+            style="@style/compile_cartoon_scene_rb"
+            android:text="@string/current"/>
+
+        <RadioButton
+            android:id="@+id/effect_all"
+            style="@style/compile_cartoon_scene_rb"
+            android:text="@string/all_frame"/>
+    </RadioGroup>
+
+
+    <!-- 三级目录素材 -->
+    <FrameLayout
+        android:id="@+id/fcompile_cartoon_effect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

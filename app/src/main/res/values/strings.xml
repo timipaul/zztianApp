@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">众创空间</string>
+    <string name="Logo">Logo</string>
+    <string name="collect">收藏</string>
+    <string name="creation">创作</string>
+    <string name="read">阅读</string>
+    <string name="history">历史</string>
+    <string name="seek">搜索</string>
+    <string name="recommend">推荐</string>
+    <string name="ranking">排行</string>
+    <string name="classify">分类</string>
+    <string name="cartoonSet">漫画创建</string>
+    <string name="textSet">文字创建</string>
+    <string name="updateStory">更新故事</string>
+    <string name="recharge">充值</string>
+    <string name="story">故事</string>
+    <string name="material">素材</string>
+    <string name="hotRecommend">热门推荐</string>
+    <string name="screen">筛选</string>
+    <string name="attention">关注</string>
+    <string name="community">社区</string>
+    <string name="course">教程</string>
+    <string name="myVIP">我的VIP</string>
+    <string name="my_circle">我的圈子</string>
+    <string name="myWallet">我的钱包</string>
+    <string name="store">自在商城</string>
+    <string name="creditsExchange">积分兑换</string>
+    <string name="my_post">我的帖子</string>
+    <string name="myAttention">我的关注</string>
+    <string name="myCollect">我的收藏</string>
+    <string name="participation_works">参与作品</string>
+    <string name="myDiary">我的日记</string>
+    <string name="editor">漫画编辑器</string>
+    <string name="browse_history">浏览历史</string>
+    <string name="systemSet">系统设置</string>
+    <string name="more">></string>
+    <string name="xxxx">续费仅需9元</string>
+    <string name="user">用户名</string>
+    <string name="my_coffers">我的小金库</string>
+    <string name="sign">签到</string>
+    <string name="information">消息</string>
+    <string name="dates">数据</string>
+    <string name="details">详情</string>
+    <string name="catalog">目录</string>
+    <string name="comment">评论</string>
+    <string name="monthlyPayment">包月</string>
+    <string name="startRead">开始阅读</string>
+    <string name="share">分享</string>
+    <string name="storyStart">故事开篇</string>
+    <string name="viewReturn">返回</string>
+    <string name="zhongChuang">众创</string>
+    <string name="alone">独创</string>
+    <string name="joint">接龙</string>
+    <string name="cancel">取消</string>
+    <string name="mostFiery">最火热</string>
+    <string name="newPutaway">新上架</string>
+    <string name="writing">写作</string>
+    <string name="cartoon">漫画</string>
+    <string name="emptyDate">清空</string>
+    <string name="buttonDate">提交</string>
+    <string name="colors">颜色</string>
+    <string name="layout">布局</string>
+    <string name="scene">场景</string>
+    <string name="role">角色</string>L
+    <string name="effects">效果</string>
+    <string name="other">其它</string>
+    <string name="materialLibrary">素材库</string>
+    <string name="environment">环境</string>
+    <string name="background">背景</string>
+    <string name="architecture">建筑</string>
+    <string name="article">物件</string>
+    <string name="custom">自定义</string>
+    <string name="text">文字</string>
+    <string name="grassland">草地</string>
+    <string name="current">当前框</string>
+    <string name="all_frame">所有框</string>
+    <string name="collect_file">收藏夹</string>
+    <string name="water">水面</string>
+    <string name="desert">沙漠</string>
+    <string name="login">点击登录</string>
+    <string name="personageDataEdit">个人资料</string>
+    <string name="accountAndSafety">账号与安全</string>
+    <string name="clearCache">清除缓存</string>
+    <string name="examineUpdate">检查更新</string>
+    <string name="aboutApp">关于我们</string>
+    <string name="helpAndFeedback">意见反馈</string>
+    <string name="setting">设置</string>
+    <string name="readSetting">阅读设置</string>
+    <string name="exitRegister">退出登录</string>
+    <string name="world">世界</string>
+    <string name="circle">圈子</string>
+    <string name="immediatelyLogin">立即登录</string>
+    <string name="integral_exchange_regulation">积分兑换规则</string>
+    <string name="low_flow">低流量模式</string>
+    <string name="low_flow_text">非wifi环境下加载低质量图片,可为您节省流量</string>
+    <string name="reply_push">回复推送</string>
+    <string name="reply_push_text">开启后及时收到别人的评论</string>
+    <string name="update_hint">更新提示</string>
+    <string name="update_hint_text">关注作品更新后会及时提醒</string>
+    <string name="night_pattern">夜间模式</string>
+    <string name="night_pattern_text">开启后,夜间阅读不伤眼睛</string>
+    <string name="phone_set">手机号设置</string>
+    <string name="award">赏个好评</string>
+    <string name="recommend_to_friend">推荐给好友</string>
+    <string name="help">帮助中心</string>
+    <string name="user_deal">用户协议</string>
+    <string name="sing_in_award">签到有奖</string>
+    <string name="auth_code">验证码</string>
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

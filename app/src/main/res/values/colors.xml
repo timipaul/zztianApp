@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#a9b3eb</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="blue">#3097fd</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="red">#ff0000</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#BBBBBB</color>
+    <color name="black">#262020</color>
+    <color name="orange">#ff8f33</color>
+    <color name="pink">#b282fa</color>
+    <color name="green">#a2dc8b</color>
+    <color name="shallowGray">#ece9e9</color>
+    <color name="lucency">#00000000</color>
+
+    <color name="colorBcg">#d3eaea</color>
+    <color name="colorBlue">#0172FF</color>
+    <color name="color_2bb2b3_tag0">#2bb2b3</color>
+    <color name="color_2d8bc0_tag5">#2d8bc0</color>
+    <color name="holo_purple">#ffaa66cc</color>
+    <color name="deep_purple">#5f0b89</color>
+
+
+
+    <!--<color name="transparent">#00000000</color>
+    &lt;!&ndash;<color name="white">#ffffff</color>&ndash;&gt;
+    <color name="holo_green_light">#ff99cc00</color>
+    <color name="holo_red_light">#ffff4444</color>
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <color name="holo_green_dark">#ff669900</color>
+    <color name="holo_red_dark">#ffcc0000</color>
+
+    <color name="holo_orange_light">#ffffbb33</color>
+    <color name="holo_orange_dark">#ffff8800</color>
+    &lt;!&ndash;<color name="colorPrimary">#3F51B5</color>&ndash;&gt;
+    &lt;!&ndash;<color name="colorPrimaryDark">#303F9F</color>&ndash;&gt;
+    &lt;!&ndash;<color name="colorAccent">#FF4081</color>&ndash;&gt;
+    <color name="white_color">#ffffffff</color>
+    <color name="blue_color">#00BCD4</color>
+    <color name="light_blue_color">#3BAFDA</color>
+    <color name="darkgray">#50808080</color>
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <color name="title_bar_color">#F5FFF6</color>
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <color name="light_yellow">#F9EDDF</color>
+    <color name="sky_blue">#DAE8F5</color>
+    <color name="black_transparent">#d0000000</color>
+    <color name="theme_color">#2BAA97</color>
+    <color name="gay_light">#113f24</color>
+    <color name="color_dark">#141819</color>
+    <color name="color_light">#F5FFF6</color>
+    <color name="login_back">#ECEBE9</color>
+    <color name="mine_background">#dddbdc</color>
+    <color name="gray_line">#2B2B2B</color>
+    <drawable name="transparent_background">#00000000</drawable>
+
+
+    <color name="yellow">#fff09b37</color>
+    <color name="light_green">#69DB2D</color>
+    <color name="read_menu_bg">#f71b1c1e</color>
+    <color name="read_menu_light_bg">#eb1b1c1e</color>
+    <color name="read_menu_pressed">#0e0e0e</color>
+    <color name="read_menu_text">#cacaca</color>
+    <color name="md__defaultBackground">#FF555555</color>
+    <color name="read_menu_divider">#FF555555</color>
+    <color name="theme_read_text_white">#3e3d39</color>
+    <color name="theme_read_text_night">#999999</color>
+    <color name="book_default_red">#d63231</color>
+    <color name="book_actionbar_pressed">#1178ba</color>
+    <color name="book_shelf_bg">#f6f6f6</color>
+    <color name="book_shelf_item_divider">#e2e2e2</color>
+    <color name="book_shelf_item_bg">#ffffff</color>
+    <color name="book_shelf_item_bg_pressed">#fffbef</color>
+    <color name="book_shelf_item_name">#281828</color>
+    <color name="book_shelf_item_chapter">#7d7d7d</color>
+    <color name="book_shelf_item_top">#b4b4b4</color>
+    <color name="book_shelf_menu_item_pressed">#AF352e38</color>
+    <color name="book_shelf_menu_text">#dfdfdf</color>
+    <color name="book_shelf_menu_vison_text">#8b8995</color>
+    <color name="book_shelf_menu_bg">#151515</color>
+    <color name="text_light_white">#ababab</color>
+    <color name="text_gray">#6f6f6f</color>
+    <color name="text_black">#000000</color>
+    <color name="text_light_black">#555555</color>
+    <color name="text_light_gray">#bababa</color>
+    <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+    <color name="indicator_title_select_text">#d63231</color>
+    <color name="indicator_title_unselect_text">#555555</color>
+    <color name="book_detail_chapter_pressed">#FFF8DF</color>
+    <color name="book_detail_desc">#353535</color>
+    <color name="dialog_choose_divider">#cecece</color>
+    <color name="text_pullrefreshing_buttom">#7d7d7d</color>
+    <color name="book_type_blue_line">#739CBA</color>
+    <color name="book_type_red_line">#DFBDBC</color>
+    <color name="book_type_yellow_line">#f4ecd8</color>
+    <color name="empty_page_text">#d59b5e</color>
+    <color name="dialog_click">#eeeeee</color>
+    <color name="dialog_read_line">#F08F8D</color>
+    <color name="bg_shelf_download">#ff5412</color>
+    <color name="fb_conversation_bg">#dfdfdf</color>
+    <color name="fb_conversation_text">#2a2b2d</color>
+    <color name="fb_conversation_input_bg">#efefef</color>
+    <color name="text_notifi">#eaeaea</color>
+    <color name="guide_indicator_stroke">#c61a1a</color>
+    <color name="guide_indicator_bg">#bababa</color>
+    <color name="guide_transparent">#41000000</color>
+    <color name="middle_transparent">#7f000000</color>
+    <color name="dialog_text">#da3217</color>
+    <color name="bg_source_dialog_divider">#e9e8e8</color>
+    <color name="bg_source_dialog_pressed">#f4f4f4</color>
+    <color name="source_text_title">#555555</color>
+    <color name="source_text_type">#a9a9a9</color>
+    <color name="source_divider">#a9a9a9</color>
+    <color name="dialog_update_title">#959595</color>
+    <color name="dialog_update_content">#000000</color>
+    <color name="dialog_update_divider">#c6c6c6</color>
+    <color name="dialog_update_now">#f22426</color>
+    <color name="bg_remove_ad_plant_pressed">#f8e7d5</color>
+    <color name="auto_read_line">#a8a8a8</color>
+    <color name="typeface_gray">#b5b5b5</color>
+    <color name="read_ad_shae">#99000000</color>
+    <color name="dialog_bg">#E6f6f6f6</color>
+    <color name="dialog_divider">#cccdd1</color>
+    <color name="dialog_bule">#33B5E5</color>
+    <color name="keep_guide_bg">#F3F3F3</color>
+    <color name="menu_divider">#626262</color>
+    <color name="divider">#e2e2e2</color>
+    <color name="book_source_head_bg">#f2f2f2</color>
+
+    <color name="theme_read_sheep">#f1dfc0</color>
+    <color name="theme_read_gray">#dfdeda</color>
+    <color name="theme_read_green">#cae0d3</color>
+    <color name="theme_read_blue">#c6d6e2</color>
+    <color name="theme_read_purple">#DBCADD</color>
+
+    <color name="theme_read_bg_white">#fffcf7</color>
+    <color name="theme_read_bg_yellow">#DAC0AE</color>
+    <color name="theme_read_bg_green">#ceefce</color>
+    <color name="theme_read_bg_pink">#E8B5B5</color>
+    <color name="theme_read_bg_night">#999999</color>
+    <color name="action_bar_red">#DE3D34</color>
+    <color name="ac_share_trans_bg">#7F000000</color>
+    <color name="text_setting_pressed">#e4e4e4</color>
+    <color name="userinfo_line">#00c2f3</color>
+    <color name="random_black_bg">#323232</color>
+    <color name="shelf_rec_bg">#FF8400</color>
+    <color name="bg_notifi_download">#7f000000</color>
+    <color name="text_ef_red">#7e0e0d</color>
+    <color name="text_ef_gray">#949494</color>
+    <color name="text_ef_light_gray">#d7d7d7</color>
+    <color name="color_ef_divider">#000000</color>
+    <color name="color_ef_black">#242323</color>
+    <color name="color_ef_item_normal">#282828</color>
+    <color name="color_ef_item_pressed">#323232</color>
+    <color name="color_ef_shae">#64000000</color>
+
+    <drawable name="color_dirList_divider">#a0aaae</drawable>
+
+    <color name="color_ef_source_pressed">#3b3b3b</color>
+    <drawable name="view_chapter_list_day_divider">#c0beb8</drawable>
+    <drawable name="view_chapter_list_night_divider">#a0aaae</drawable>
+    <drawable name="view_chapter_list_black_divider">#ff000000</drawable>
+    <drawable name="view_chapter_list_sheep_divider">#be9872</drawable>
+    <drawable name="bg_default_book">#cccccc</drawable>
+    <drawable name="transparent">#00000000</drawable>
+    <drawable name="black">#000000</drawable>
+
+
+    <color name="color_ff">#F0F0F0</color>
+    <color name="color_00">#8A000000</color>
+
+
+    &lt;!&ndash;   FlowLayout  &ndash;&gt;
+    <color name="flowlayout_tv_color1">#f6b37f</color>
+    <color name="flowlayout_tv_color2">#ee7d77</color>
+    <color name="flowlayout_tv_color3">#00a0e9</color>
+    <color name="flowlayout_tv_color4">#ea68a2</color>
+    <color name="flowlayout_tv_color5">#fff100</color>
+    <color name="flowlayout_tv_color6_gray">#c0c0c0</color>
+
+
+    &lt;!&ndash; text color &ndash;&gt;
+    <color name="text_color_blue">#00abf9</color>
+    <color name="text_color_gray">#999999</color>
+    <color name="text_color_orange">#f19149</color>
+    <color name="text_color_orange2">#F8B551</color>
+    <color name="text_color_bookcaseHeader1">#bdffffff</color>
+    <color name="text_color_bookcaseHeader3">#ffffff</color>
+    <color name="text_color_bookcaseHeader2">#a5a5a6</color>
+    <color name="text_color_latitude">#696262</color>
+    <color name="text_color_discover">#000000</color>
+    <color name="text_color_recharge">#171717</color>
+    <color name="text_color_history">#bfbfbf</color>
+    <color name="text_color_signsuccess">#ff812a</color>
+    <color name="text_color_main">#00abf9</color>
+    &lt;!&ndash; 字体阴影色&ndash;&gt;
+    <color name="text_shadow">#0176da</color>
+    <color name="text_mybook">#a6aaac</color>
+
+    &lt;!&ndash; divider color &ndash;&gt;
+    <color name="divider_color_gray">#e5e5e5</color>
+    <color name="divider_common">#d2d2d2</color>
+    <color name="divider_gray">#bfbfbf</color>
+
+
+    &lt;!&ndash; 背景色&ndash;&gt;
+    <color name="discover_bgColor">#f2f3f3</color>
+    <color name="bg_common_color">#f2f3f3</color>
+    <color name="signSuccessBtn">#ff8028</color>
+
+    &lt;!&ndash; 新Read界面&ndash;&gt;
+    <color name="colorYellow">#FFEC8B</color>
+    <color name="halfColorPrimary">#aa2C2C2C</color>
+    <color name="dark_red">#ff8c1c1c</color>
+    <color name="light_gray">#ffececec</color>
+    <color name="dark_gray">#ff999999</color>
+    <color name="silver">#ffecebe8</color>
+    <color name="skyblue">#87CEEB</color>
+    <color name="full_transparent">#00000000</color>
+    <color name="half_transparent">#aa000000</color>
+    <color name="background_color">#eeeeee</color>
+    <color name="list_item_divider">#cccccc</color>
+    <color name="text_color">#000000</color>
+    <color name="text_color_pressed">#ffffff</color>
+    <color name="text_title_color">#444444</color>
+    <color name="menu_background">#d3d7d4</color>
+    <color name="toolpop_background">#b0000000</color>
+    <color name="shelf_background">#DA955A</color>
+    <color name="shelf_myNavigationColor">#86471B</color>
+    &lt;!&ndash; Reader Color &ndash;&gt;
+    <color name="reader_default_bg_toolbar">#CC000000</color>
+    <color name="reader_default_bg_yellow">#CFBEB6</color>
+    <color name="reader_default_bg_black">#090C13</color>
+    <color name="reader_default_text_light">#32414E</color>
+    <color name="reader_default_text_dark">#444444</color>
+    <color name="read_background">#FAF9DE</color>
+    <color name="read_background_paperYellow">#D4C5A3</color>
+    <color name="read_textColor">#3B3A38</color>
+
+    <color name="read_dialog_bg">#2C2C2C</color>
+    <color name="read_dialog_button_select">#E25754</color>
+
+    <color name="read_bg_default">#CEC29C</color>
+    <color name="read_bg_1">#CCEBCC</color>
+    <color name="read_bg_2">#37342F</color>
+    <color name="read_bg_3">#D1CEC5</color>
+    <color name="read_bg_4">#001C27</color>
+
+    <color name="read_font_default">#2C2C2C</color>
+    <color name="read_font_1">#2F332D</color>
+    <color name="read_font_2">#92918C</color>
+    <color name="read_font_3">#383429</color>
+    <color name="read_font_4">#627176</color>
+
+    <color name="lineColor">#60d3d3d3</color>
+    &lt;!&ndash; UI Color &ndash;&gt;
+    <color name="myPrimaryColor">#4284F5</color>
+    <color name="myPrimaryDarkColor">#3870d0</color>
+    <color name="myAccentColor">#fe5151</color>
+    <color name="myDrawerBackground">#F2F2F2</color>
+    <color name="myWindowBackground">#F5F5F5</color>
+    <color name="myTextPrimaryColor">#FFFFFF</color>
+    <color name="mySearchToggleColor">#7F7F7F</color>
+    &lt;!&ndash; Navigation Color is 30% black mask attack to primary color &ndash;&gt;
+    <color name="myNavigationColor">#2E5CAB</color>
+    <color name="myNavigationColorWhite">#B2B2B2</color>
+
+
+    &lt;!&ndash;v3.0&ndash;&gt;
+    <color name="bgMainColor">#f5f5f5</color>
+    <color name="bgDividerColor">#bfbfbf</color>
+    <color name="spaceColor">#eeeeee</color>
+    <color name="black333">#333333</color>
+    <color name="black666">#666666</color>
+    <color name="black999">#999999</color>
+    <color name="blackbbb">#bbbbbb</color>
+    <color name="blackcbcb">#999999</color>
+    <color name="grayd2d2">#d2d2d2</color>
+    <color name="grayebeb">#ebebeb</color>
+    <color name="grayf5f5">#f5f5f5</color>
+    <color name="orangefb8">#fb8254</color>
+    <color name="searchtestcolor1">#e45642</color>
+    <color name="searchtestcolor2">#e08821</color>
+    <color name="searchtestcolor3">#f9a54d</color>
+    <color name="strokeColor1">#07ca90</color>
+    <color name="strokeColor2">#fa9050</color>
+    <color name="strokeColor3">#7198ff</color>
+    <color name="strokeColor4">#fdbe21</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_f9a54d">#f9a54d</color>
+
+    <color name="color_a779ce_tag1">#a779ce</color>
+    <color name="color_e663e2_tag2">#e663e2</color>
+    <color name="color_e97249_tag3">#e97249</color>
+    <color name="color_e8c23f_tag4">#e8c23f</color>
+
+    <color name="color_e6e6e6">#e6e6e6</color>
+    <color name="color_dd565d">#dd565d</color>
+    <color name="color_2088b5">#2088b5</color>
+    <color name="color_bf8506">#bf8506</color>
+    <color name="color_18181a">#18181a</color>-->
+
+</resources>

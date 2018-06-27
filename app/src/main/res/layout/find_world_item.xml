@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.timi.framedemo.Utils.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:maxHeight="60dp"
+            android:maxWidth="60dp"
+            android:src="@drawable/store_4"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/user_image"
+            android:layout_toRightOf="@+id/user_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/holo_purple"
+                android:paddingEnd="2dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingStart="2dp"
+                android:text="vip"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名"
+                android:textColor="@color/orange"/>
+
+            <TextView
+                android:id="@+id/presentation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="漫画(圈子)"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:text="+关注"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/content_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:singleLine="false"
+        android:text="内容更新啦 多多关注
+喜欢就点个赞吧"/>
+
+    <ImageView
+        android:id="@+id/content_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:srcCompat="@drawable/home_catroon_1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/issue_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1小时前"/>
+
+        <TextView
+            android:id="@+id/praise_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="500"/>
+
+        <TextView
+            android:id="@+id/praise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/praise_number"
+            android:layout_toStartOf="@+id/praise_number"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:text="赞"
+            android:textColor="@color/shallowGray"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/reply_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@+id/praise"
+            android:layout_toStartOf="@+id/praise"
+            android:text="6666"/>
+
+        <TextView
+            android:id="@+id/reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/reply_number"
+            android:layout_toStartOf="@+id/reply_number"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:text="复"
+            android:textColor="@color/shallowGray"/>
+
+        <TextView
+            android:id="@+id/read_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@+id/reply"
+            android:layout_toStartOf="@+id/reply"
+            android:text="555"/>
+
+        <TextView
+            android:id="@+id/read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/read_number"
+            android:layout_toStartOf="@+id/read_number"
+            android:background="@color/gray"
+            android:text="阅"
+            android:textColor="@color/shallowGray"/>
+    </RelativeLayout>
+</LinearLayout>

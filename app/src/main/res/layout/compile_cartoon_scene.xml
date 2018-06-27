@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+    <RadioGroup
+        android:id="@+id/rg_compile_cartoon_scent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/cartoon_scene_background"
+            style="@style/compile_cartoon_scene_rb"
+            android:text="@string/background"/>
+
+        <RadioButton
+            android:id="@+id/cartoon_scene_environment"
+            style="@style/compile_cartoon_scene_rb"
+            android:text="@string/environment"/>
+
+        <RadioButton
+            android:id="@+id/cartoon_scene_architecture"
+            style="@style/compile_cartoon_scene_rb"
+            android:text="@string/architecture"/>
+
+        <RadioButton
+            android:id="@+id/cartoon_scene_article"
+            style="@style/compile_cartoon_scene_rb"
+            android:text="@string/article"/>
+
+
+
+        <RadioButton
+            android:id="@+id/cartoon_scene_custom"
+            style="@style/compile_cartoon_scene_rb"
+            android:text="@string/custom"/>
+    </RadioGroup>
+
+
+    <!-- 三级目录素材 -->
+    <FrameLayout
+        android:id="@+id/fcompile_cartoon_material"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/story_create_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:hint="创建的漫画名"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/store_story_empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/store_story_button"
+                    android:layout_toStartOf="@+id/store_story_button"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:text="@string/emptyDate"
+                    android:textColor="@color/blue"/>
+
+                <TextView
+                    android:id="@+id/store_story_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/ic_tab_compile_bg"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:text="@string/buttonDate"
+                    android:textColor="@color/white"/>
+
+                <LinearLayout
+                    android:id="@+id/story_add_label_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/store_story_empty"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/story_add_label"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/store_story_empty"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/story_add_label_place"
+                    android:layout_toRightOf="@+id/story_add_label_place"
+                    android:background="@drawable/annular_label_bg"
+                    android:gravity="center"
+                    android:text="+标签"
+                    android:textColor="@color/blue"/>
+
+
+        </RelativeLayout>
+
+        <!-- 底部素材选择区  -->
+        <fragment
+            android:id="@+id/fstory_create_material"
+            android:name="com.timi.framedemo.activity.editor.StoryCreateMaterial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+</LinearLayout>

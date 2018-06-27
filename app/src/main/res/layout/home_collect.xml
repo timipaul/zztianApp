@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:autoWrapLineLayout="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <cn.wolfspider.autowraplinelayout.AutoWrapLineLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/awl_home_collect_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        autoWrapLineLayout:fillMode="0"
+        autoWrapLineLayout:horizontalGap="1dp"
+        autoWrapLineLayout:verticalGap="1dp">
+
+
+
+
+    </cn.wolfspider.autowraplinelayout.AutoWrapLineLayout>
+
+</LinearLayout>

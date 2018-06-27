@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_classify_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:text="返回"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_classify_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="分类"
+            android:textSize="17sp"/>
+
+        <ImageView
+            android:id="@+id/read_classify_seek"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/home_menu_seek_blue"/>
+    </RelativeLayout>
+
+
+    <!-- 筛选条件 -->
+    <fragment
+        android:id="@+id/fread_classify_rg"
+        android:name="com.timi.framedemo.activity.home.ReadClassify_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <RadioGroup
+            android:id="@+id/classify_rg_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/classify_rb_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:textColor="@color/button_read_classify_text_drawable_selector"
+                android:text="@string/recommend"/>
+
+            <RadioButton
+                android:id="@+id/classify_rb_fiery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:textColor="@color/button_read_classify_text_drawable_selector"
+                android:text="@string/mostFiery"/>
+
+            <RadioButton
+                android:id="@+id/classify_rb_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:textColor="@color/button_read_classify_text_drawable_selector"
+                android:textSize="15sp"
+                android:text="@string/newPutaway"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/classify_tv_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:text="筛选"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+
+    <!-- 漫画显示 -->
+    <fragment
+        android:id="@+id/fread_classify_cartoon"
+        android:name="com.timi.framedemo.activity.home.ReadClassifyCartoon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

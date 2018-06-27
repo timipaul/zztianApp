@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+
+            <RadioGroup
+                android:id="@+id/rg_compile_writing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/compile_writing_zhongchuang"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/compile_writing_zhongchuang"
+                    style="@style/compileWritingRb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zhongChuang"/>
+
+                <RadioButton
+                    android:id="@+id/compile_writing_jojnt"
+                    style="@style/compileWritingRb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/joint"/>
+
+                <RadioButton
+                    android:id="@+id/compile_writing_alone"
+                    style="@style/compileWritingRb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alone"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/compile_writing_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/compile_writing_button"
+                android:layout_toStartOf="@+id/compile_writing_button"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/emptyDate"
+                android:textColor="@color/blue"/>
+
+            <TextView
+                android:id="@+id/compile_writing_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/ic_tab_compile_bg"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:enabled="false"
+                android:text="@string/buttonDate"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:id="@+id/writing_add_label_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/compile_writing_empty"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/writing_add_label"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/compile_writing_empty"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/writing_add_label_place"
+                android:layout_toRightOf="@+id/writing_add_label_place"
+                android:background="@drawable/annular_label_bg"
+                android:gravity="center"
+                android:text="+标签"
+                android:textColor="@color/blue"/>
+        </RelativeLayout>
+
+
+
+        <EditText
+            android:id="@+id/compile_writing_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/shallowGray"
+            android:gravity="top|start"
+            android:hint="在此处编辑你所要创作的内容！！！"
+            android:inputType="textMultiLine"
+            android:minLines="5"
+            android:paddingEnd="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:paddingStart="15dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            />
+    </LinearLayout>
+
+</ScrollView>

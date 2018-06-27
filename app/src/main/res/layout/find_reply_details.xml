@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.timi.framedemo.Utils.CircleImageView
+                    android:id="@+id/user_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/store_4"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/user_image"
+                    android:layout_toRightOf="@+id/user_image"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="婷迷"
+                        />
+
+                    <TextView
+                        android:id="@+id/presentation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12楼 一小时前"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/praise_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="赞666"/>
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/content_title"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_head"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginStart="50dp"
+                android:singleLine="false"
+                android:text="内容更新啦 多多关注
+        喜欢就点个赞吧"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/filtrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/content_title"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="18dp"
+                android:text="按最新"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/filtrate"
+                android:layout_marginEnd="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="17dp"
+                android:background="@color/shallowGray"
+                android:text="TextView"/>
+
+            <ListView
+                android:id="@+id/comment_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filtrate"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/shallowGray"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/reply_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/reply"
+            android:background="@color/white"
+            android:hint="回复此贴"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"/>
+
+        <Button
+            android:id="@+id/praise"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:text="赞"/>
+
+        <Button
+            android:id="@+id/share"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toLeftOf="@+id/praise"
+            android:text="享"/>
+
+        <Button
+            android:id="@+id/reply"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/share"
+            android:text="复"/>
+    </RelativeLayout>
+
+</RelativeLayout>

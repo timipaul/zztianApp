@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+    <RadioGroup
+        android:id="@+id/rg_compile_cartoon_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:gravity="center_vertical|center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/layout_recommend"
+            style="@style/compile_cartoon_scene_rb"
+            android:layout_width="80dp"
+            android:layout_weight="0"
+            android:text="@string/recommend"/>
+
+        <RadioButton
+            android:id="@+id/layout_collection"
+            style="@style/compile_cartoon_scene_rb"
+            android:layout_width="80dp"
+            android:layout_weight="0"
+            android:text="@string/collect_file"/>
+
+    </RadioGroup>
+
+
+    <!-- 三级目录素材 -->
+    <FrameLayout
+        android:id="@+id/fcompile_cartoon_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

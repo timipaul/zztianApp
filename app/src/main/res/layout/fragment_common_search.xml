@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autoWrapLineLayout="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_layout_seek"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="15dp"
+    android:orientation="horizontal"
+    android:paddingEnd="0dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="0dp"
+    android:paddingStart="20dp">
+
+
+    <EditText
+        android:id="@+id/home_seek_content"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/shallowGray"
+        android:hint="搜索作品 作者 社区内容"
+        android:paddingBottom="2dp"
+        android:paddingEnd="0dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="0dp"
+        android:paddingStart="20dp"
+        android:paddingTop="2dp"
+        android:textSize="15sp"
+        android:maxLines="1"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/home_seek_but"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_alignBottom="@+id/home_seek_content"
+        android:layout_alignLeft="@+id/home_seek_content"
+        android:layout_alignStart="@+id/home_seek_content"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/home_menu_seek_blue"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/home_seek_conceal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/home_seek_content"
+        android:layout_alignRight="@+id/home_seek_content"
+        android:layout_marginTop="2dp"
+        android:paddingEnd="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingStart="5dp"
+        android:text="@string/cancel"
+        android:textSize="16sp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/hot_seek_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home_seek_content"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/hot_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:text="热门搜索"/>
+
+        <ImageView
+            android:id="@+id/seek_change_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/hot_search"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/rotate"/>
+
+        <GridView
+            android:id="@+id/wl_seek_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hot_search"
+            android:gravity="center"
+            android:horizontalSpacing="1pt"
+            android:numColumns="3"
+            android:verticalSpacing="1pt"
+            android:visibility="visible">
+        </GridView>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp">
+
+
+        <LinearLayout
+            android:id="@+id/seek_filtrate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/home_seek_conceal"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:id="@+id/result_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/result_fiction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/result_cartoon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/result_community"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

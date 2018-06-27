@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:id="@+id/rela_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/read_catalog_logo"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/Logo"
+                android:scaleType="fitXY"
+                android:src="@drawable/content_1"/>
+
+            <TextView
+                android:id="@+id/read_catalog_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/read_catalog_logo"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_toEndOf="@+id/read_catalog_logo"
+                android:layout_toRightOf="@+id/read_catalog_logo"
+                android:text="第1话：三打白骨精"/>
+
+            <TextView
+                android:id="@+id/read_catalog_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/read_catalog_logo"
+                android:layout_alignLeft="@+id/read_catalog_name"
+                android:layout_alignStart="@+id/read_catalog_name"
+                android:layout_marginBottom="9dp"
+                android:text="2017-03-31"/>
+
+            <TextView
+                android:id="@+id/read_catalog_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/read_catalog_date"
+                android:layout_alignBottom="@+id/read_catalog_date"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/read_catalog_date"
+                android:text="赞 6666"/>
+        </RelativeLayout>
+    </LinearLayout>
+</HorizontalScrollView>
+
+

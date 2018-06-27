@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!--<TextView
+        android:id="@+id/read_text_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingEnd="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:text="返回"
+        android:onClick="onClick"
+        android:textSize="20sp"/>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/read_content_story"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/pink"
+                android:gravity="center_horizontal|center"
+                android:maxWidth="25dp"
+                android:text="本段其它剧情 五个"
+                android:textSize="18sp"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingEnd="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingStart="10dp">
+
+                <TextView
+                    android:id="@+id/read_section_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="第一段"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:id="@+id/read_section_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/read_section_number"
+                    android:layout_centerHorizontal="true"
+                    android:text="婷迷冬瓜"/>
+
+                <TextView
+                    android:id="@+id/read_content_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/read_section_author"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="2sp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:padding="5dp"
+                    android:text="内容"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/read_content_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/read_content_like"
+                    android:layout_toStartOf="@+id/read_content_like"
+                    android:background="@color/gray"
+                    android:onClick="onClick"
+                    android:paddingEnd="2dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:paddingStart="2dp"
+                    android:text="另写此段"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/read_content_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="false"
+                    android:layout_below="@+id/read_content_text"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@color/orange"
+                    android:onClick="onClick"
+                    android:paddingEnd="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingStart="10dp"
+                    android:text="点赞"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/read_content_to_cartoon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/pink"
+                android:gravity="center_horizontal|center"
+                android:maxWidth="25dp"
+                android:text="本段漫画版三个"
+                android:textSize="18sp"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.timi.framedemo.Utils.FlowRadioGroup
+        android:id="@+id/classify_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_1"
+            style="@style/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部"/>
+
+        <RadioButton
+            android:id="@+id/rb_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="少年"/>
+
+        <RadioButton
+            android:id="@+id/rb_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="奇幻"/>
+
+        <RadioButton
+            android:id="@+id/rb_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="爆笑"/>
+
+        <RadioButton
+            android:id="@+id/rb_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日漫"/>
+
+        <RadioButton
+            android:id="@+id/rb_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="都市"/>
+
+        <RadioButton
+            android:id="@+id/rb_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="古风"/>
+
+        <RadioButton
+            android:id="@+id/rb_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="治愈"/>
+    </com.timi.framedemo.Utils.FlowRadioGroup>
+
+
+</LinearLayout>

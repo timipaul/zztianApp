@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:autoWrapLineLayout="http://schemas.android.com/apk/res-auto"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+    <!--  这个视图可以被替换   用网格视图代替  -->
+
+    <cn.wolfspider.autowraplinelayout.AutoWrapLineLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/awl_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        autoWrapLineLayout:fillMode="0"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/home_cartoon_image"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_catroon_1"/>
+
+            <TextView
+                android:id="@+id/home_cartoon_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:text="妖神记"/>
+
+            <LinearLayout
+                android:id="@+id/fll_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/home_cartoon_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:text="玄幻"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </cn.wolfspider.autowraplinelayout.AutoWrapLineLayout>
+</LinearLayout>

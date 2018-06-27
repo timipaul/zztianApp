@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp">
+
+    <com.timi.framedemo.Utils.CircleImageView
+        android:id="@+id/community_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/store_4"/>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/community_image"
+        android:text="官方"/>
+
+    <TextView
+        android:id="@+id/publish_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_toRightOf="@+id/community_image"
+        android:text="2小时前"/>
+
+    <TextView
+        android:id="@+id/content_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/community_image"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:text="内容更新啦"/>
+
+    <ImageView
+        android:id="@+id/content_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_title"
+        android:layout_margin="10dp"
+        app:srcCompat="@drawable/community_course"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_image"
+        android:paddingEnd="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/praise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/praise_number"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:text="赞"
+            android:textColor="@color/shallowGray"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/praise_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="500"/>
+
+        <TextView
+            android:id="@+id/reply_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@+id/praise"
+            android:text="6666"/>
+
+        <TextView
+            android:id="@+id/reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/reply_number"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:text="复"
+            android:textColor="@color/shallowGray"/>
+
+        <TextView
+            android:id="@+id/read_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@+id/reply"
+            android:text="555"/>
+
+        <TextView
+            android:id="@+id/read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/read_number"
+            android:background="@color/gray"
+            android:text="阅"
+            android:textColor="@color/shallowGray"/>
+    </RelativeLayout>
+</RelativeLayout>

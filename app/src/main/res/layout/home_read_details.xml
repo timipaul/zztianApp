@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingBottom="40dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--顶部返回与分享-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink">
+
+                <TextView
+                    android:id="@+id/read_returnFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:onClick="onClick"
+                    android:text="@string/more"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="2dp"
+                    android:paddingEnd="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingStart="3dp"
+                    android:paddingTop="2dp"
+                    android:text="@string/share"
+                    android:textSize="15sp"/>
+            </FrameLayout>
+
+            <!-- logo和主题 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/read_details_logo"
+                    android:layout_width="130dp"
+                    android:layout_height="170dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/Logo"
+                    android:src="@drawable/read_logo"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/read_cartoon_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="暗夜魅影"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/read_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/read_cartoon_name"
+                        android:layout_marginBottom="15dp"
+                        android:text="官方发起"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/read_click"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/read_author"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="点击:"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/read_click_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/read_author"
+                        android:layout_toEndOf="@+id/read_click"
+                        android:layout_toRightOf="@+id/read_click"
+                        android:text="500万"
+                        android:textColor="@color/orange"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/read_collect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/read_author"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@+id/read_click_number"
+                        android:layout_toRightOf="@+id/read_click"
+                        android:text="收藏:"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/read_collect_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/read_author"
+                        android:layout_toEndOf="@+id/read_collect"
+                        android:layout_toRightOf="@+id/read_collect"
+                        android:text="9.6万"
+                        android:textColor="@color/orange"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/read_participation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/read_participation_number"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:text="参与:"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/read_participation_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/read_cartoon"
+                        android:layout_alignBottom="@+id/read_cartoon"
+                        android:layout_alignLeft="@+id/read_click_number"
+                        android:layout_alignStart="@+id/read_click_number"
+                        android:text="59人"
+                        android:textColor="@color/orange"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/read_cartoon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/read_collect"
+                        android:layout_alignStart="@+id/read_collect"
+                        android:layout_below="@+id/read_collect"
+                        android:text="漫画:"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/read_cartoon_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/read_cartoon"
+                        android:layout_alignBottom="@+id/read_cartoon"
+                        android:layout_alignLeft="@+id/read_collect_number"
+                        android:layout_alignStart="@+id/read_collect_number"
+                        android:text="16话"
+                        android:textColor="@color/orange"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_read_details_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/read_participation"
+                        android:layout_marginTop="30dp">
+
+                        <TextView
+                            android:id="@+id/read_type1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="魔幻"
+                            android:textColor="@color/gray"/>
+
+                        <TextView
+                            android:id="@+id/read_type2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="其他"
+                            android:textColor="@color/gray"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--中间的RadioGroup菜单-->
+            <RadioGroup
+                android:id="@+id/rg_Home_read_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#11000000"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <RadioButton
+                    android:id="@+id/home_read_details"
+                    style="@style/read_menu_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/details"/>
+
+                <RadioButton
+                    android:id="@+id/home_read_catalog"
+                    style="@style/read_menu_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/catalog"/>
+
+                <RadioButton
+                    android:id="@+id/home_read_comment"
+                    style="@style/read_menu_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/comment"/>
+
+            </RadioGroup>
+
+
+            <!--FrameLayout-->
+            <FrameLayout
+                android:id="@+id/fl_home_read_details"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+            <!--底部的阅读-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/read_menu_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/collect"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/read_monthlyPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/monthlyPayment"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/start_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/startRead"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+

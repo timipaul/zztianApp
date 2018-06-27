@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp">
+
+
+    <com.timi.framedemo.Utils.CircleImageView
+        android:id="@+id/read_comment_logo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        app:srcCompat="@drawable/store_1"/>
+
+    <TextView
+        android:id="@+id/read_comment_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/read_comment_logo"
+        android:layout_marginBottom="15dp"
+        android:layout_toEndOf="@+id/read_comment_logo"
+        android:layout_toRightOf="@+id/read_comment_logo"
+        android:text="婷迷冬瓜"/>
+
+    <TextView
+        android:id="@+id/read_comment_attention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/read_comment_name"
+        android:layout_alignBottom="@+id/read_comment_name"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:text="关注"/>
+
+    <TextView
+        android:id="@+id/read_comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/read_comment_logo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="评论加关注点赞啊,在附上美图一张"/>
+
+    <ImageView
+        android:id="@+id/read_comment_subjoin_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/read_comment_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        app:srcCompat="@drawable/timi_1"/>
+
+    <TextView
+        android:id="@+id/read_comment_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/read_comment_subjoin_logo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:text="5分钟前"/>
+
+    <TextView
+        android:id="@+id/read_comment_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/read_comment_subjoin_logo"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="回复 9999"/>
+
+    <TextView
+        android:id="@+id/read_comment_good"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/read_comment_subjoin_logo"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_toLeftOf="@+id/read_comment_reply"
+        android:layout_toStartOf="@+id/read_comment_reply"
+        android:text="点赞 9999"/>
+
+</RelativeLayout>

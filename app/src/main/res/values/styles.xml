@@ -1,0 +1,178 @@
+<resources>
+
+    <!-- Base application theme.
+    原来的设置：Theme.AppCompat.Light.DarkActionBar
+    -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+
+
+    <style name="bottom_tag_style" >
+        <!-- Customize your theme here. <item name="android:button">@android:color/transparent</item>-->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/bottom_textcolor_drawable_selector</item>
+    </style>
+    
+    <style name="textView_tag_style">
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+
+
+
+    </style>
+
+    <style name="my_account_FLayout">
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:background">@color/white</item>
+
+
+    </style>
+
+    <style name="my_account_menu">
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+
+
+    </style>
+    
+    <style name="my_account_menu_more">
+        <item name="android:layout_gravity">end|center_vertical</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <!--<item name="android:paddingEnd">15dp</item>
+        <item name="android:paddingStart">10dp</item>-->
+        <item name="android:textSize">25sp</item>
+
+        
+    </style>
+
+    <style name="read_menu_select">
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/bottom_textcolor_drawable_selector</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">3dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+
+    </style>
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorControlActivated">@color/pink</item>
+    </style>
+
+    <style name="radioButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/button_read_classify_text_drawable_selector</item>
+        <item name="android:drawableBottom">@drawable/rb_classify_drawable_selector</item>
+
+    </style>
+    
+    <style name="compileWritingRb">
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/compile_writing_button_bg_selector</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textSize">14sp</item>
+
+    </style>
+
+    <!-- 编辑器 - 漫画 - 素材一级bottom  -->
+    <style name="story_material_rb">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@drawable/bottom_story_material_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+
+
+    </style>
+
+    <!-- 编辑器 - 漫画 - 素材二级bottom
+    @drawable/bottom_compile_cartoon_scene_text_selector
+    -->
+    <style name="compile_cartoon_scene_rb">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:background">@drawable/bottom_compile_cartoon_scene_bg_selector</item>
+        <item name="android:textColor">@color/button_create_cartoon_color</item>
+
+    </style>
+
+    <!-- 编辑器 - 漫画 - 素材三级bottom  -->
+    <style name="compile_cartoon_scene_envirnment_rb">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/compile_writing_button_bg_selector</item>
+
+    </style>
+
+    <!-- 从底部弹出分享界面 -->
+    <style name="BottomDialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomDialog.Animation" parent="Animation.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@anim/translate_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/translate_dialog_out</item>
+    </style>
+
+</resources>

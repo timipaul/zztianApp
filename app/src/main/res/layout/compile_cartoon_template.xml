@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg_compile_cartoon_template"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_compile_cartoon_scent_environment_grassland"
+            style="@style/compile_cartoon_scene_envirnment_rb"
+            android:text="@string/grassland"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_compile_cartoon_scent_environment_water"
+            style="@style/compile_cartoon_scene_envirnment_rb"
+            android:text="@string/water"/>
+
+        <RadioButton
+            android:id="@+id/rb_compile_cartoon_scent_environment_desert"
+            style="@style/compile_cartoon_scene_envirnment_rb"
+            android:text="@string/desert"/>
+
+    </RadioGroup>
+
+    <!-- 横向滑动-->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <!-- 显示筛选后的素材 -->
+        <LinearLayout
+            android:id="@+id/ll_compile_cartoon_template_image"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:orientation="horizontal"/>
+
+
+    </HorizontalScrollView>
+
+
+
+
+</LinearLayout>

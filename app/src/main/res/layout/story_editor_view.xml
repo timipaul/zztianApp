@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/black">
+
+        <Button
+            android:id="@+id/editor_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:minWidth="0dp"
+            android:text="@string/viewReturn"
+            android:textColor="@color/blue"/>
+
+        <Button
+            android:id="@+id/menu_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:minWidth="0dp"
+            android:text="保存"
+            android:textColor="@color/blue"/>
+
+        <Button
+            android:id="@+id/menu_top_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:minWidth="0dp"
+            android:text="上一页"
+            android:textColor="@color/blue"/>
+
+        <Button
+            android:id="@+id/menu_down_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:minWidth="0dp"
+            android:text="下一页"
+            android:textColor="@color/blue"/>
+
+        <Button
+            android:id="@+id/menu_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:minWidth="0dp"
+            android:text="清空"
+            android:textColor="@color/blue"/>
+
+        <Button
+            android:id="@+id/menu_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:minWidth="0dp"
+            android:text="提交"
+            android:textColor="@color/blue"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_menu"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/left_mune"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:orientation="vertical"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:drawableTop="@drawable/view_overturn"
+                android:minWidth="0dp"
+                android:text="翻转"/>
+
+            <Button
+                android:id="@+id/view_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:drawableTop="@drawable/view_top"
+                android:minWidth="0dp"
+                android:text="往上"/>
+
+            <Button
+                android:id="@+id/view_below"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:drawableTop="@drawable/view_below"
+                android:minWidth="0dp"
+                android:text="往下"/>
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:drawableTop="@drawable/view_color"
+                android:minWidth="0dp"
+                android:text="调色"/>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/editor_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 底部素材选择区  -->
+    <fragment
+        android:id="@+id/fstory_editor_material"
+        android:name="com.timi.framedemo.activity.editor.StoryCreateMaterial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
