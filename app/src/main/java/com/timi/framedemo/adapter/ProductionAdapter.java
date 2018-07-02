@@ -9,33 +9,33 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.timi.framedemo.R;
+import com.timi.framedemo.Utils.GetHttpImg;
+import com.timi.framedemo.bean.Cartoon;
+
+import java.util.List;
 
 /**
  * 作品显示适配器
  */
 public class ProductionAdapter extends BaseAdapter{
-
-    private int[] mImage;
-    private String[] mName;
-    private String[] mStyle;
     private Context mContext;
+    private List<Cartoon> mList;
+    private OnItemClickListener onItemClickListener;
 
-    public ProductionAdapter(Context context, int[] image,String[] name,String[] type){
+    public ProductionAdapter(Context context,List<Cartoon> list){
         this.mContext = context;
-        this.mImage = image;
-        this.mName = name;
-        this.mStyle = type;
+        this.mList = list;
     }
 
     @Override
     public int getCount() {
-        return mImage.length;
+        return mList.size();
     }
 
     @Override
     public Object getItem(int position) {
 
-        return position;
+        return mList.get(position);
     }
 
     @Override
@@ -52,15 +52,23 @@ public class ProductionAdapter extends BaseAdapter{
             holder.mImage=(ImageView)convertView.findViewById(R.id.user_cartoon_image);
             holder.name=(TextView)convertView.findViewById(R.id.user_cartoon_name);
             holder.type=(TextView)convertView.findViewById(R.id.user_cartoon_type);
+
             convertView.setTag(holder);
         }else{
             holder=(ViewHolder)convertView.getTag();
         }
 
-        holder.name.setText(mName[position]);
-        holder.type.setText(mStyle[position]);
-        holder.mImage.setImageResource(mImage[position]);
+        holder.mImage.setId(mList.get(position).getId());
+        holder.name.setText(mList.get(position).getBookName());
+        holder.type.setText(mList.get(position).getBookType());
+        GetHttpImg.setUserImg(holder.mImage, mList.get(position).getCover());
 
+        holder.mImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClickListener.onItemClick(v.getId());
+            }
+        });
         return convertView;
     }
 
@@ -68,5 +76,13 @@ public class ProductionAdapter extends BaseAdapter{
         private TextView name ;
         private TextView type;
         private ImageView mImage;
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        this.onItemClickListener=listener;
+
+    }
+    public interface OnItemClickListener{
+        void onItemClick(int tag);
     }
 }

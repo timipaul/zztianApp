@@ -9,10 +9,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -20,7 +23,9 @@ import com.timi.framedemo.R;
 import com.timi.framedemo.ShareDataApplication;
 import com.timi.framedemo.Utils.Utility;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -39,6 +44,16 @@ public class StoryEditorView extends FragmentActivity implements View.OnClickLis
     private LinearLayout leftView;
     public int leftViewWidth;
     private LinkedHashMap<Integer,int[]> mMap = new LinkedHashMap<>();
+    //当前视图数据
+    private List<Bitmap> mBitmaps;
+    private List<Map> mMapList;
+    private List<Bitmap> mAllList;
+    private ListView mListView;
+    private RelativeLayout rl_view;
+    private RelativeLayout rl_image;
+    //起始图层
+    private int count = 0;
+
 
 
     @Override
@@ -46,7 +61,6 @@ public class StoryEditorView extends FragmentActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
 
         initView();
-
         initData();
     }
 
@@ -57,7 +71,13 @@ public class StoryEditorView extends FragmentActivity implements View.OnClickLis
         editor_content = (RelativeLayout) findViewById(R.id.editor_content);
         topView = (LinearLayout) findViewById(R.id.top_menu);
         leftView = (LinearLayout) findViewById(R.id.left_mune);
+        mListView = (ListView) findViewById(R.id.listview);
+        rl_view = (RelativeLayout) findViewById(R.id.redact_view);
+        rl_image = (RelativeLayout) findViewById(R.id.image_view);
 
+        mBitmaps = new ArrayList<>();
+        mAllList = new ArrayList<>();
+        mMapList = new ArrayList<>();
         //设置点击
         for (int i = 0; i < topView.getChildCount(); i++) {
             View view = topView.getChildAt(i);
@@ -117,7 +137,7 @@ public class StoryEditorView extends FragmentActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.menu_save:
-                //保存图片到手机相册 待修改为保存到服务器
+                //保存图片到内存中
                 saveImageToPhone();
                 break;
             case R.id.menu_empty:
@@ -131,8 +151,94 @@ public class StoryEditorView extends FragmentActivity implements View.OnClickLis
             case R.id.view_below:
                 setViewToTopOrBelow(-1);
                 break;
+            case R.id.set_back:
+                //调色
+                Toast.makeText(this,"功能完善中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.menu_submit:
+                //显示图片集
+                buttonShowImage();
+                break;
+            case R.id.menu_top_page:
+                //上一页
+                redactNewView(-1);
+                break;
+            case R.id.menu_down_page:
+                redactNewView(1);
+                //下一页
+                break;
         }
     }
+
+    //创建新一页
+    private void redactNewView(int view) {
+        if(view == -1){
+            count = count + view < 0 ? 0 : count + view;
+            if(count == 0){
+                Toast.makeText(this,"已经是第一页了", Toast.LENGTH_SHORT).show();
+                return;
+            }
+        }
+        if(mBitmaps == null){
+            Toast.makeText(this,"请编辑保存", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        //保存视图
+        saveImageToPhone();
+        mBitmaps.clear();
+        mMapList.add(mMap);
+        mMap.clear();
+        ((ShareDataApplication)this.getApplicationContext()).removeDataList();
+
+        //清空视图 当做新的一页
+        editor_content.removeAllViews();
+
+        count += view;
+
+    }
+
+    //提交展示图片
+    private void buttonShowImage() {
+        //浏览编辑好的图片以及上传
+        if(mBitmaps == null){
+            Toast.makeText(this,"编辑后请保存...", Toast.LENGTH_SHORT).show();
+        }else{
+            rl_view.setVisibility(View.GONE);
+            rl_image.setVisibility(View.VISIBLE);
+            mListView.setAdapter(adapter);
+
+        }
+    }
+
+    BaseAdapter adapter = new BaseAdapter() {
+        @Override
+        public int getCount() {
+            System.out.println("要显示图片的数量：" + mAllList.size());
+            return mAllList.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return mAllList.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            ImageView image = new ImageView(StoryEditorView.this);
+            //image.setLayoutParams(new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT,AbsListView.LayoutParams.MATCH_PARENT));
+            image.setScaleType(ImageView.ScaleType.CENTER);
+            for (int i = 0; i < mAllList.size(); i++) {
+                image.setImageBitmap(mAllList.get(position));
+            }
+
+            return image;
+        }
+    };
 
 
     //视图切换之上下一层
@@ -144,12 +250,6 @@ public class StoryEditorView extends FragmentActivity implements View.OnClickLis
         share_get=this.getSharedPreferences("data", MODE_PRIVATE);
         //最后点击的ID
         int viewId = share_get.getInt("finallyView", 0);
-
-        //用循环的方式找出ID在map中的位置
-        /*ShareDataApplication sd = (ShareDataApplication) this.getApplicationContext();
-        if(sd.getDataList() != null){
-            mMap = sd.getDataList();
-        }*/
 
         //当前视图所在父类容器中的下标
         View view = findViewById(viewId);
@@ -173,11 +273,25 @@ public class StoryEditorView extends FragmentActivity implements View.OnClickLis
         //获取图片数据
         ShareDataApplication sd = (ShareDataApplication) getApplicationContext();
         LinkedHashMap<Integer,int[]> m = sd.getDataList();
+        System.out.println("m: ==== " + m.toString());
+        if(m == null){
+            Toast.makeText(this,"请编辑类容再保存", Toast.LENGTH_SHORT).show();
+            return;
+        }
         //合成图片
         Bitmap bitImage = combineBitmap(m);
-        //保存到手机
-        Utility.saveImageToGallery(this,bitImage);
+        //保存 需要一个标识  判断是当前视图位置
+        System.out.println("图片要存放的位置" + count);
+        //mBitmaps.add(bitImage);
 
+        try {
+            mAllList.set(count,bitImage);
+        } catch (Exception e) {
+            mAllList.add(count,bitImage);
+        }
+
+        System.out.println("图片数量：" + mAllList.toString());
+        Toast.makeText(this,"保存成功", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -185,7 +299,7 @@ public class StoryEditorView extends FragmentActivity implements View.OnClickLis
      * 图片组合
      * @return
      */
-    public Bitmap combineBitmap(LinkedHashMap<Integer,int[]> map) {
+    public Bitmap combineBitmap(LinkedHashMap<Integer,int[]> map){
         Bitmap newmap;
         if( map != null){
             //获取编辑器视图的宽高

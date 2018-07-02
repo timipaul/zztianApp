@@ -70,6 +70,7 @@ public class CartoonSceneArchitectureFragment extends BaseFragment implements Vi
         ShareDataApplication sd = (ShareDataApplication) getContext().getApplicationContext();
         if(sd.getDataList() != null){
             mMap = sd.getDataList();
+            System.out.println("建筑中的数据map：" + mMap.toString());
         }
 
         //读取图片移动要减去的空间
@@ -213,11 +214,17 @@ public class CartoonSceneArchitectureFragment extends BaseFragment implements Vi
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
         //简化三目远算符
-        isUiVisible = !hidden;
-        /*if(hidden){
+        //isUiVisible = !hidden;
+        if(hidden){
             isUiVisible = false;
         }else{
             isUiVisible = true;
-        }*/
+            //加载编辑器共享数据
+            ShareDataApplication sd = (ShareDataApplication) getContext().getApplicationContext();
+            if(sd.getDataList() != null){
+                mMap = sd.getDataList();
+                System.out.println("建筑中的数据map：" + mMap.toString());
+            }
+        }
     }
 }

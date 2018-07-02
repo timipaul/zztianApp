@@ -67,7 +67,9 @@ public class HttpUtils {
             System.out.println("请求状态信息" + status);
             String sjson = jsonObject.getString("result");
             //解密
-            result = CXAESUtil.decrypt(AppConstants.CXAES, sjson);
+            //result = CXAESUtil.decrypt(AppConstants.CXAES, sjson);
+            System.out.println("sjson-----" + sjson);
+            result = SymmetricEncoder1.aesDecryptString(sjson,"ZIZAITIAN@666666");
         } catch (Exception e) {
             e.printStackTrace();
         }

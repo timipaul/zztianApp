@@ -53,7 +53,6 @@ public class FindFragment extends BaseFragment implements View.OnClickListener{
         mWorld = (RadioButton) view.findViewById(R.id.rb_find_world);
         mCircle = (RadioButton) view.findViewById(R.id.rb_find_circle);
         mAttention = (RadioButton) view.findViewById(R.id.rb_find_attention);
-
         mSeek.setOnClickListener(this);
         mRecord.setOnClickListener(this);
 

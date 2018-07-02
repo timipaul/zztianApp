@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -35,6 +36,7 @@ public class MoreReadDataActivity extends AppCompatActivity implements View.OnCl
     private ListView mListView;
     private List<Cartoon> datas;
     private Handler handler;
+    private GridView mGridView;
 
 
     @Override
@@ -50,6 +52,7 @@ public class MoreReadDataActivity extends AppCompatActivity implements View.OnCl
 
     private void initView() {
         setContentView(R.layout.fragment_common_frame);
+        mGridView = (GridView) findViewById(R.id.layout_content);
 
         Intent intent = getIntent();
         Bundle data = intent.getBundleExtra("data");
@@ -81,6 +84,7 @@ public class MoreReadDataActivity extends AppCompatActivity implements View.OnCl
                 RequestBody formBody = new FormBody.Builder()
                         .add("pageNum", "1")
                         .add("pageSize","10")
+                        .add("cartoonType","1")
                         .build();
                 try {
                     String url = "/cartoon/cartoonlist";

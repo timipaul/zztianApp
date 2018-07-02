@@ -41,17 +41,18 @@ public class CartoonSceneBackgroundFragment extends BaseFragment implements View
         mRadioGroup.removeAllViews();
         mLayout_image_materials = (LinearLayout) view.findViewById(R.id.ll_compile_cartoon_template_image);
 
-        ShareDataApplication sd = (ShareDataApplication) getContext().getApplicationContext();
-        if(sd.getDataList() != null){
-            mMap = sd.getDataList();
-        }
-
-        
         return view;
     }
 
     @Override
     protected void initData() {
+
+        //加载编辑器共享数据
+        ShareDataApplication sd = (ShareDataApplication) getContext().getApplicationContext();
+        if(sd.getDataList() != null){
+            mMap = sd.getDataList();
+            System.out.println("建筑中的数据map：" + mMap.toString());
+        }
 
         String[] data = {"背景1","背景2","背景3"};
 
@@ -117,10 +118,11 @@ public class CartoonSceneBackgroundFragment extends BaseFragment implements View
             ImageView iv = (ImageView) getActivity().findViewById(viewData[0]);
             editor_content.removeView(iv);
             viewData[0] = imageView.getId();
-            mMap.remove(iv.getId());
-
+            if(iv != null){
+                mMap.remove(iv.getId());
+            }
         }
-        System.out.println("map里的数据：" + mMap.size());
+        System.out.println("背景中的数据：" + mMap.toString());
         ((ShareDataApplication)getContext().getApplicationContext()).setDataList(mMap);
     }
 
@@ -128,11 +130,17 @@ public class CartoonSceneBackgroundFragment extends BaseFragment implements View
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
         //简化三目远算符
-        isUiVisible = !hidden;
-        /*if(hidden){
+        //isUiVisible = !hidden;
+        if(hidden){
             isUiVisible = false;
         }else{
             isUiVisible = true;
-        }*/
+            //加载编辑器共享数据
+            ShareDataApplication sd = (ShareDataApplication) getContext().getApplicationContext();
+            if(sd.getDataList() != null){
+                mMap = sd.getDataList();
+            }
+
+        }
     }
 }

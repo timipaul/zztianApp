@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -25,6 +24,7 @@ import com.timi.framedemo.R;
 import com.timi.framedemo.Utils.CXAESUtil;
 import com.timi.framedemo.Utils.GetHttpImg;
 import com.timi.framedemo.Utils.HttpUtils;
+import com.timi.framedemo.Utils.SharedPreferencesUtils;
 import com.timi.framedemo.activity.common.MenuGroupFragment;
 import com.timi.framedemo.activity.home.BrowseHistory;
 import com.timi.framedemo.activity.home.CreateUpdateCartoon;
@@ -162,10 +162,7 @@ public class MyAccountFragment extends BaseFragment implements View.OnClickListe
         tvSpaceMoney.setText("0\n自在币");
 
         System.out.println("获取数据");
-        SharedPreferences share_get=null;
-        share_get=mContext.getSharedPreferences("data", mContext.MODE_PRIVATE);
-        //根据键获取数据，第二个参数为默认值，若没有指定的键，则返回默认值
-        final int userId = share_get.getInt("userId",0);
+        final Integer userId = (Integer) SharedPreferencesUtils.getParam(mContext,"userId",0);
         System.out.println("userId: --- " + userId);
         if(userId != 0){
 

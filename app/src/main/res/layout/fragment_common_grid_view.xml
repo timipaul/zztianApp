@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridView
+<com.timi.framedemo.Utils.MyGridView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/layout_content"
         android:layout_width="wrap_content"
@@ -10,4 +10,4 @@
         android:horizontalSpacing="1pt"
         android:numColumns="3"
         android:verticalSpacing="1pt">
-    </GridView>
+    </com.timi.framedemo.Utils.MyGridView>

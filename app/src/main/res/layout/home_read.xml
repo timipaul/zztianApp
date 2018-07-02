@@ -102,87 +102,26 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/read_more"/>
         </RelativeLayout>
-        <!--<RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <Button
-                android:id="@+id/read_create_but"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@+id/read_ranking_but"
-                android:layout_toStartOf="@+id/read_ranking_but"
-                android:background="#00000000"
-                android:drawableTop="@drawable/read_create_but"
-                android:text="众创 "
-                />
-
-            <Button
-                android:id="@+id/read_joint_but"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@+id/read_ranking_but"
-                android:layout_toStartOf="@+id/read_ranking_but"
-                android:background="#00000000"
-                android:drawableTop="@drawable/read_create_but"
-                android:text="接龙 "
-                />
-
-            <Button
-                android:id="@+id/read_ranking_but"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:background="#00000000"
-                android:drawableTop="@drawable/read_ranking_but"
-                android:text="排行"/>
-
-            <Button
-                android:id="@+id/read_classify_but"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/read_ranking_but"
-                android:layout_toRightOf="@+id/read_ranking_but"
-                android:background="#00000000"
-                android:drawableTop="@drawable/read_classify_but"
-                android:text="分类"/>
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/read_create_but"
-                android:layout_marginLeft="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="5dp"
-                android:text="为您推荐"
-                android:textColor="@color/black"
-                android:textSize="18sp"/>
-
-            <TextView
-                android:id="@+id/read_more_but"
-                android:layout_width="50dp"
-                android:layout_height="20dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/read_create_but"
-                android:layout_marginEnd="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/read_more"/>
-        </RelativeLayout>-->
-
-
+    <com.timi.framedemo.Utils.MyGridView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:horizontalSpacing="1pt"
+        android:numColumns="3"
+        android:verticalSpacing="1pt">
+    </com.timi.framedemo.Utils.MyGridView>
         <!-- 一列三行的显示 -->
-            <fragment
+            <!--<fragment
                 android:id="@+id/fhome_read_cartoon"
                 android:name="com.timi.framedemo.activity.home.CartoonList"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"/>-->
 
 
 

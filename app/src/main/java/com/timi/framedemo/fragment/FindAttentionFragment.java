@@ -7,9 +7,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import com.tencent.tauth.Tencent;
-import com.timi.framedemo.AppConstants;
 import com.timi.framedemo.R;
+import com.timi.framedemo.Utils.SharedPreferencesUtils;
 import com.timi.framedemo.Utils.Utility;
 import com.timi.framedemo.activity.my.MyLoginPageActivity;
 import com.timi.framedemo.adapter.FindItemAdapter;
@@ -25,8 +24,8 @@ public class FindAttentionFragment extends BaseFragment implements View.OnClickL
     private ListView mListView;             //内容
     private RelativeLayout rl_layout;       //登录内容
     private Button mButton;                 //登录按钮
+    private int userId;
 
-    public static Tencent mTencent;
 
 
     private ArrayList<Object> list;
@@ -38,9 +37,6 @@ public class FindAttentionFragment extends BaseFragment implements View.OnClickL
         mListView = (ListView) view.findViewById(R.id.find_attention_content_list);
         mButton = (Button) view.findViewById(R.id.attention_login_but);
 
-        mTencent = Tencent.createInstance(AppConstants.APP_ID, mContext);
-
-
         mButton.setOnClickListener(this);
         //判断登录 加载数据
         loginShow();
@@ -50,14 +46,16 @@ public class FindAttentionFragment extends BaseFragment implements View.OnClickL
     //判断登录 加载数据
     private void loginShow() {
 
+        userId = (Integer) SharedPreferencesUtils.getParam(mContext,"userId",0);
 
-        if(!mTencent.isSessionValid()){
+        if(userId != 0){
             //登录
             rl_layout.setVisibility(View.VISIBLE);
             mListView.setVisibility(View.GONE);
             //加载数据
             showContent();
-        }else {
+        }
+        else {
             rl_layout.setVisibility(View.GONE);
             mListView.setVisibility(View.VISIBLE);
         }

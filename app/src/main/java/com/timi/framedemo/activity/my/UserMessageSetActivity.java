@@ -11,7 +11,6 @@ import android.widget.Button;
 import com.timi.framedemo.R;
 import com.timi.framedemo.Utils.HorizontalListView;
 import com.timi.framedemo.adapter.HorizontalListViewAdapter;
-import com.timi.framedemo.adapter.ProductionAdapter;
 
 /**
  * 我的 - 用户个人信息
@@ -61,7 +60,7 @@ public class UserMessageSetActivity extends Activity implements View.OnClickList
         String[] name = {"妖神记","女神纪元","白鹤三绝","斗罗大陆","斗破苍穹","冰火魔厨","遮天","绝世唐门"};
         String[] type = {"玄幻 武侠","古风 战斗","奇幻 武侠","战斗","武侠 玄幻","女生","男生","现代 都市"};
 
-        ProductionAdapter productionAdapter = new ProductionAdapter(this, image,name,type);
+        /*ProductionAdapter productionAdapter = new ProductionAdapter(this, image,name,type);
         horizontal_list_production.setAdapter(productionAdapter);
 
         horizontal_list_production.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -72,7 +71,7 @@ public class UserMessageSetActivity extends Activity implements View.OnClickList
                 System.out.println("作品被点击了.." + position);
 
             }
-        });
+        });*/
 
     }
 

@@ -3,7 +3,9 @@ package com.timi.framedemo.fragment;
 import android.content.Intent;
 import android.os.Handler;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.timi.framedemo.R;
 import com.timi.framedemo.Utils.HttpUtils;
@@ -67,7 +69,6 @@ public class FindWorldFragment extends BaseFragment {
 
                     String result = httpUtils.OkhttpPost(url,formBody);
                     JSONArray jsonArray = JSONArray.fromObject(result);
-
                     mListTopic = new ArrayList<>();
                     for (int i = 0; i < jsonArray.size(); i++) {
 
@@ -106,11 +107,25 @@ public class FindWorldFragment extends BaseFragment {
             adapter.setOnItemClickListener(new FindWorldAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(Integer parameter) {
-                    //跳转到帖子详情页
-                    Intent intent = new Intent(mContext,IssueParticularsActivity.class);
-                    startActivity(intent);
+
+                    Toast.makeText(mContext, "点赞", Toast.LENGTH_SHORT).show();
                 }
             });
+
+            mListView.setOnItemClickListener(new clickRead());
+
+
         }
     };
+
+    //适配器点击
+    private class clickRead implements android.widget.AdapterView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+            //跳转到帖子详情页
+            Intent intent = new Intent(mContext,IssueParticularsActivity.class);
+
+            startActivity(intent);
+        }
+    }
 }

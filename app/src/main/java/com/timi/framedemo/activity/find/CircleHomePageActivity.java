@@ -14,8 +14,10 @@ import com.timi.framedemo.R;
 import com.timi.framedemo.Utils.HttpUtils;
 import com.timi.framedemo.Utils.Utility;
 import com.timi.framedemo.adapter.CircleContentAdapter;
+import com.timi.framedemo.bean.Topic;
 
 import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -85,13 +87,13 @@ public class CircleHomePageActivity extends AppCompatActivity{
                     JSONArray jsonArray = JSONArray.fromObject(result);
                     System.out.println("圈子评论：" + jsonArray);
                     list = new ArrayList();
-                    /*for (int i = 0; i < jsonArray.size(); i++) {
+                    for (int i = 0; i < jsonArray.size(); i++) {
                         JSONObject json = jsonArray.getJSONObject(i);
                         Topic top = new Topic();
                         top.setId(json.getInt("id"));
                         top.setBoardId(json.getString("boardId"));
                         list.add(top);
-                    }*/
+                    }
                     handler.post(runnableUi);
                 } catch (Exception e) {
                     e.printStackTrace();

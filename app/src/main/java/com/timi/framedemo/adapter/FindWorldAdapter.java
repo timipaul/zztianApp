@@ -104,19 +104,22 @@ public class FindWorldAdapter extends BaseAdapter{
 
 
 
-        GetHttpImg.setUserImg(viewHolder.mUser_image, mList.get(i).getHeadimg());
+        //判断内容里面是图片
+        if(mList.get(i).getHeadimg() != null){
+            GetHttpImg.setUserImg(viewHolder.mUser_image, mList.get(i).getHeadimg());
+        }
+
         viewHolder.mUser_name.setText(mList.get(i).getNickName());
         viewHolder.mVip.setVisibility(vips[Utility.getRandom(2)]);
         viewHolder.mType.setText(mList.get(i).getBoardId() + "(圈子)");
-        viewHolder.mIssue_date.setText(Utility.longToDate(mList.get(i).getPublishtime()));
+        if(mList.get(i).getPublishtime() != null){
+            viewHolder.mIssue_date.setText(Utility.longToDate(mList.get(i).getPublishtime()));
+        }
         viewHolder.mAdd.setTag(i);
         viewHolder.mContent_title.setText(mList.get(i).getTitle());
         viewHolder.mPraise_number.setText(mList.get(i).getPraisecount() + "");
         viewHolder.layout.setTag(mList.get(i).getId());
-        //判断内容里面是图片
-        if(false){
-            //GetHttpImg.setUserImg(viewHolder.mContent_image, mList.get(i).getHeadimg());
-        }
+
         viewHolder.mRead_number.setText(mList.get(i).getClickcount() + "");
         viewHolder.mReply_number.setText(mList.get(i).getReplycount() + "");
         //判断是否点赞
@@ -126,14 +129,7 @@ public class FindWorldAdapter extends BaseAdapter{
 
         parameter = i;
 
-        viewHolder.mContent_image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onItemClickListener.onItemClick(parameter);
-            }
-        });
-
-        viewHolder.mContent_title.setOnClickListener(new View.OnClickListener() {
+        viewHolder.mPraise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onItemClickListener.onItemClick(parameter);

@@ -34,6 +34,7 @@ import com.timi.framedemo.AppConstants;
 import com.timi.framedemo.R;
 import com.timi.framedemo.Util;
 import com.timi.framedemo.Utils.CXAESUtil;
+import com.timi.framedemo.Utils.SharedPreferencesUtils;
 import com.timi.framedemo.Utils.Utility;
 
 import net.sf.json.JSONArray;
@@ -336,7 +337,7 @@ public class MyLoginPageActivity extends FragmentActivity implements View.OnClic
                 @Override
                 public void run() {
                     RequestBody formBody = new FormBody.Builder()
-                            .add("phoneNumber", phone)
+                            .add("phone", phone)
                             .build();
                     try {
                         String url = "http://192.168.0.165:8888/login/sendMsg";
@@ -401,7 +402,10 @@ public class MyLoginPageActivity extends FragmentActivity implements View.OnClic
                     if(code == 100){
                         //登录注册成功 返回
                         //保存登录信息到手机，方便下次自动登录
-                        saveData(phone,userId);
+                        //saveData(phone,userId);
+
+                        SharedPreferencesUtils.setParam(MyLoginPageActivity.this,"phoneLoginNumber",phone);
+                        SharedPreferencesUtils.setParam(MyLoginPageActivity.this,"userId",userId);
                         //设置返回信息
                         Intent data = new Intent();
                         data.putExtra("MESSAGE",code);
@@ -428,7 +432,7 @@ public class MyLoginPageActivity extends FragmentActivity implements View.OnClic
     public void saveData(String phone,int userId){
         SharedPreferences share=null;
         //得到SharePreferences对象，第一个参数：指定文件名，第二个参数：操作模式
-        share=this.getSharedPreferences("data", MODE_PRIVATE);
+        share=this.getSharedPreferences("data", MODE_MULTI_PROCESS);
         //得到SharedPreferen.Edit对象
         SharedPreferences.Editor edit=share.edit();
         //用edit存储数据

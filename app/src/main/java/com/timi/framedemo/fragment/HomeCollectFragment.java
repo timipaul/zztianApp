@@ -1,7 +1,6 @@
 package com.timi.framedemo.fragment;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -9,6 +8,7 @@ import android.widget.GridView;
 
 import com.timi.framedemo.R;
 import com.timi.framedemo.Utils.HttpUtils;
+import com.timi.framedemo.Utils.SharedPreferencesUtils;
 import com.timi.framedemo.activity.read.ReadDetails;
 import com.timi.framedemo.adapter.CoverShowAdapter;
 import com.timi.framedemo.base.BaseFragment;
@@ -39,19 +39,20 @@ public class HomeCollectFragment extends BaseFragment {
 
         mGridView = (GridView) view.findViewById(R.id.layout_content);
         handler = new Handler();
-        SharedPreferences share_get=null;
-        share_get=mContext.getSharedPreferences("data", mContext.MODE_PRIVATE);
-        //根据键获取数据，第二个参数为默认值，若没有指定的键，则返回默认值
 
-        userId = share_get.getInt("userId",0);
+        userId = (Integer)SharedPreferencesUtils.getParam(mContext,"userId",0);
 
-        addView();
         return view;
     }
 
+    @Override
+    protected void initData() {
+        if(userId != 0){
+            addView();
+        }
+    }
 
     private void addView() {
-
         new Thread(){
             @Override
             public void run() {

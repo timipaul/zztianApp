@@ -12,7 +12,7 @@ public class AppConstants {
 
     public static final String key = "LfR5Dbkkdpo8QDWL";
     //加解密
-    public static final String CXAES = "zztian999";
+    public static final String CXAES = "ZIZAITIAN@666666";
     //请求路径
     public static final String UrlHead = "http://192.168.0.165:8888";
     //申请的开发appid

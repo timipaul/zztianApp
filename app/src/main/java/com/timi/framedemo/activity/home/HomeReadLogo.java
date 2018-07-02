@@ -16,6 +16,7 @@ import com.timi.framedemo.Utils.GetHttpImg;
 import com.timi.framedemo.Utils.HttpUtils;
 import com.timi.framedemo.activity.read.ReadDetails;
 import com.timi.framedemo.base.BaseFragment;
+import com.timi.framedemo.bean.Cartoon;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
@@ -31,20 +32,14 @@ import okhttp3.RequestBody;
  */
 public class HomeReadLogo extends BaseFragment{
 
-    private ImageView homeImg = null;
-
-    private static final String TAG = HomeReadLogo.class.getCanonicalName();
-
     private RollPagerView mRollViewPager;
-
-    private List<String> image;
+    private List<Cartoon> mList;
     private Handler handler=null;
 
     @Override
     protected View initView() {
 
         final View view = View.inflate(mContext, R.layout.home_read_logo,null);
-
         mRollViewPager = (RollPagerView)view.findViewById(R.id.roll_view_pager);
 
         //设置播放时间间隔
@@ -53,7 +48,6 @@ public class HomeReadLogo extends BaseFragment{
         mRollViewPager.setAnimationDurtion(500);
 
         handler=new Handler();
-        image = new ArrayList<String>();
         getImageData();
 
         return view;
@@ -66,14 +60,18 @@ public class HomeReadLogo extends BaseFragment{
                 HttpUtils httpUtils = new HttpUtils();
                 RequestBody formBody = new FormBody.Builder().build();
                 try {
+                    mList = new ArrayList<Cartoon>();
                     String url = "/homepage/banner";
                     String result = httpUtils.OkhttpPost(url,formBody);
                     JSONArray jsonArray = JSONArray.fromObject(result);
+                    System.out.println("logo展示图片");
                     for (int i = 0; i < jsonArray.size(); i++) {
-                        JSONObject jsonObject2 = jsonArray.getJSONObject(i);
-                        List<String> list = new ArrayList<String>();
-                        list.add(jsonObject2.getString("bookType"));
-                        image.add(jsonObject2.getString("cover"));
+                        JSONObject json = jsonArray.getJSONObject(i);
+                        Cartoon car = new Cartoon();
+                        car.setId(json.getInt("id"));
+                        car.setCover(json.getString("cover"));
+                        car.setType(json.getString("bookType"));
+                        mList.add(car);
                     }
 
                     handler.post(runnableUi);
@@ -99,14 +97,13 @@ public class HomeReadLogo extends BaseFragment{
 
     private class TestNormalAdapter extends StaticPagerAdapter {
 
-
         @Override
         public View getView(ViewGroup container, final int position) {
 
             ImageView view = new ImageView(container.getContext());
 
-            GetHttpImg.setUserImg(view, image.get(position));
-
+            GetHttpImg.setUserImg(view, mList.get(position).getCover());
+            view.setId(mList.get(position).getId());
             view.setScaleType(ImageView.ScaleType.CENTER_CROP);
             view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 
@@ -114,7 +111,7 @@ public class HomeReadLogo extends BaseFragment{
                 @Override
                 public void onClick(View v) {
                     //跳转到阅读界面去
-                    LoginPageJump(position);
+                    LoginPageJump(v.getId());
                 }
             });
 
@@ -124,7 +121,7 @@ public class HomeReadLogo extends BaseFragment{
 
         @Override
         public int getCount() {
-            return image.size();
+            return mList.size();
         }
 
     }
@@ -133,7 +130,7 @@ public class HomeReadLogo extends BaseFragment{
         Intent intent = new Intent(mContext,ReadDetails.class);
         //设置参数
         Bundle bundle=new Bundle();
-        bundle.putString("name",""+i);
+        bundle.putString("id",""+i);
         intent.putExtras(bundle);
         startActivity(intent);
     }

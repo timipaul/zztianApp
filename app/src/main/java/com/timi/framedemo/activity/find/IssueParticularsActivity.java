@@ -55,7 +55,11 @@ public class IssueParticularsActivity extends AppCompatActivity implements View.
         super.onCreate(savedInstanceState);
         initView();
 
+        initData();
+
     }
+
+
 
     private void initView() {
         setContentView(R.layout.find_issue_particulars);
@@ -74,10 +78,7 @@ public class IssueParticularsActivity extends AppCompatActivity implements View.
         mBar.setDisplayShowHomeEnabled(true);
         mBar.setHomeButtonEnabled(true);
         mBar.setDisplayHomeAsUpEnabled(true);
-        list = new ArrayList<>();
-        list.add(new Topic());
-        FindWorldAdapter adapter = new FindWorldAdapter(this,list);
-        head_layout.setAdapter(adapter);
+
 
 
 
@@ -117,6 +118,17 @@ public class IssueParticularsActivity extends AppCompatActivity implements View.
             }
         });
 
+    }
+
+    private void initData() {
+
+
+        list = new ArrayList<>();
+        Topic topic = new Topic();
+
+        list.add(topic);
+        FindWorldAdapter adapter = new FindWorldAdapter(this,list);
+        head_layout.setAdapter(adapter);
     }
 
     @Override

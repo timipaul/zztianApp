@@ -8,12 +8,10 @@ import java.util.Date;
  */
 public class Amount {
 
-
-
-
     private int id ;
     private String userId;            //用户编号
     private int integralNum;          //积分数量
+    private int month_num;            //月票
     private int rollNum;              //阅读卷数量
     private int zzbNum;               //自在币数量
     private Date createtime;          //创建时间
@@ -197,5 +195,13 @@ public class Amount {
 
     public void setSignCount(int signCount) {
         this.signCount = signCount;
+    }
+
+    public int getMonth_num() {
+        return month_num;
+    }
+
+    public void setMonth_num(int month_num) {
+        this.month_num = month_num;
     }
 }
