@@ -9,6 +9,7 @@ import android.widget.RelativeLayout;
 
 import com.timi.framedemo.R;
 import com.timi.framedemo.ShareDataApplication;
+import com.timi.framedemo.Utils.SharedPreferencesUtils;
 import com.timi.framedemo.Utils.Utility;
 import com.timi.framedemo.activity.common.CommonView;
 import com.timi.framedemo.base.BaseFragment;
@@ -23,7 +24,7 @@ public class CartoonSceneBackgroundFragment extends BaseFragment implements View
 
     private RadioGroup mRadioGroup;
     private LinearLayout mLayout_image_materials;
-    private RelativeLayout editor_content;
+    private RelativeLayout editor_view;
     private int[] layout;
     private int viewId;
     Integer[] images = {R.drawable.cartoon_material_1,R.drawable.cartoon_material_2,R.drawable.cartoon_material_3,R.drawable.cartoon_material_4};
@@ -40,6 +41,12 @@ public class CartoonSceneBackgroundFragment extends BaseFragment implements View
         mRadioGroup = (RadioGroup) view.findViewById(R.id.rg_compile_cartoon_template);
         mRadioGroup.removeAllViews();
         mLayout_image_materials = (LinearLayout) view.findViewById(R.id.ll_compile_cartoon_template_image);
+
+
+        //获取当前编辑的视图ID
+        int presentViewId = (int) SharedPreferencesUtils.getParam(mContext,"presentViewId",0);
+        //在父类activity中添加布局视图
+        editor_view = (RelativeLayout) getActivity().findViewById(presentViewId);
 
         return view;
     }
@@ -82,15 +89,12 @@ public class CartoonSceneBackgroundFragment extends BaseFragment implements View
     public void onClick(View v) {
 
         viewId = Utility.getSecondTimestampTwo(new Date());
-
-        //在父类activity中添加布局视图
-        editor_content =(RelativeLayout)getActivity().findViewById(R.id.editor_content);
-        //这里有个bug  覆盖的没移除
         ImageView imageView = new ImageView(mContext);
         imageView.setImageResource(images[(int) v.getTag()]);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT);
         imageView.setLayoutParams(params);
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+
         imageView.setId(viewId);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,7 +105,7 @@ public class CartoonSceneBackgroundFragment extends BaseFragment implements View
                     if(mCurTime-mLastTime<300){//双击事件
                         mCurTime =0;
                         mLastTime = 0;
-                        editor_content.removeView(v);
+                        editor_view.removeView(v);
                         mMap.remove(v.getId());
                         viewData[0] = null;
                     }
@@ -109,14 +113,14 @@ public class CartoonSceneBackgroundFragment extends BaseFragment implements View
             }
         });
 
-        editor_content.addView(imageView,0);
+        editor_view.addView(imageView,0);
         mMap.put(imageView.getId(),new int[2]);
         //移除上一个视图 只保留当前一个
         if(viewData[0] == null){
             viewData[0] = imageView.getId();
         }else{
             ImageView iv = (ImageView) getActivity().findViewById(viewData[0]);
-            editor_content.removeView(iv);
+            editor_view.removeView(iv);
             viewData[0] = imageView.getId();
             if(iv != null){
                 mMap.remove(iv.getId());
@@ -141,6 +145,10 @@ public class CartoonSceneBackgroundFragment extends BaseFragment implements View
                 mMap = sd.getDataList();
             }
 
+            //获取当前编辑的视图ID
+            int presentViewId = (int) SharedPreferencesUtils.getParam(mContext,"presentViewId",0);
+            //在父类activity中添加布局视图
+            editor_view = (RelativeLayout) getActivity().findViewById(presentViewId);
         }
     }
 }

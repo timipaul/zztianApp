@@ -17,12 +17,13 @@
 
         <Button
             android:id="@+id/find_menu_record"
-            android:layout_width="25dp"
+            android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/home_menu_history"/>
+            android:background="@null"
+            android:drawableLeft="@drawable/home_menu_history"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"/>
         <!--<TextView
             android:id="@+id/find_menu_record"
             android:layout_width="wrap_content"
@@ -35,17 +36,18 @@
 
         <Button
             android:id="@+id/find_menu_seek"
-            android:layout_width="25dp"
+            android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_alignEnd="@+id/rg_find_menu"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignRight="@+id/rg_find_menu"
             android:layout_centerInParent="true"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/home_menu_seek"
-            android:padding="2dp"/>
+            android:background="@null"
+            android:drawableEnd="@drawable/home_menu_seek"
+            android:padding="2dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp"/>
 
         <RadioGroup
             android:id="@+id/rg_find_menu"

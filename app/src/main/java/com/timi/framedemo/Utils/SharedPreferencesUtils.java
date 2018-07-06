@@ -52,7 +52,6 @@ public class SharedPreferencesUtils {
      */
     public static Object getParam(Context context , String key, Object defaultObject){
         String type = defaultObject.getClass().getSimpleName();
-        System.out.println("是什么类型的数据： " + type);
         SharedPreferences sp = context.getSharedPreferences(FILE_NAME, Context.MODE_MULTI_PROCESS);
 
         if("String".equals(type)){

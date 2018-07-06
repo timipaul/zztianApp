@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -128,8 +129,12 @@ public class Utility {
 
     //将imageView视图转成bitmap
     public static Bitmap viewToBitmap(View view){
-        view.buildDrawingCache();
-        Bitmap bitmap = view.getDrawingCache();
+
+        Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
+        view.draw(new Canvas(bitmap));
+
+        //view.buildDrawingCache();
+        //Bitmap bitmap = view.getDrawingCache();
         return bitmap;
     }
 
@@ -243,5 +248,9 @@ public class Utility {
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
         byte[] imgBytes = baos.toByteArray();// 转为byte数组
         return Base64.encodeToString(imgBytes, Base64.DEFAULT);
+    }
+
+    public static void setToast(Context context,String text){
+        Toast.makeText(context,text, Toast.LENGTH_SHORT).show();
     }
 }

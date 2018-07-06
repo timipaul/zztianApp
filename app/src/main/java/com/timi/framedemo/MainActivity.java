@@ -18,7 +18,6 @@ import com.tencent.connect.UserInfo;
 import com.tencent.tauth.Tencent;
 import com.timi.framedemo.Utils.BackHandlerHelper;
 import com.timi.framedemo.Utils.StatusBarUtil;
-import com.timi.framedemo.Utils.SymmetricEncoder1;
 import com.timi.framedemo.base.BaseFragment;
 import com.timi.framedemo.fragment.FindFragment;
 import com.timi.framedemo.fragment.HomeFragment;
@@ -58,35 +57,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         //修改顶部样式
         StatusBarUtil.statusBarTintColor(this,getResources().getColor(R.color.pink));
 
-
-        String kk = null;
-        try {
-            kk = SymmetricEncoder1.aesEncryptString("颠鸾倒凤","ZIZAITIAN@666666");
-            String jj = SymmetricEncoder1.aesDecryptString(kk,"ZIZAITIAN@666666");
-
-            System.out.println(jj);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
-
-
     }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-
-        String kk = null;
-        try {
-            kk = SymmetricEncoder1.aesEncryptHexStr("xiaoming9999","ABCDEFGHIJKLMNOP");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("----------------------------------" + kk);
 
         //初始化View
         initView();

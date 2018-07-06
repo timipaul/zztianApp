@@ -84,10 +84,10 @@ public class FindFragment extends BaseFragment implements View.OnClickListener{
     public void onClick(View v) {
         Intent intent = null;
         switch (v.getId()){
-            case R.id.home_menu_seek: //跳转到搜索页面
+            case R.id.find_menu_seek: //跳转到搜索页面
                 intent = new Intent(mContext, CartoonSeek.class);
                 break;
-            case R.id.home_menu_record://历史
+            case R.id.find_menu_record://历史
                 intent = new Intent(mContext,BrowseHistory.class);
                 break;
 

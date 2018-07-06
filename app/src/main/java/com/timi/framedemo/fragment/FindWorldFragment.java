@@ -54,7 +54,6 @@ public class FindWorldFragment extends BaseFragment {
     @Override
     protected void initData() {
 
-
         new Thread(){
             @Override
             public void run() {
@@ -74,7 +73,6 @@ public class FindWorldFragment extends BaseFragment {
 
                         JSONObject json = jsonArray.getJSONObject(i);
                         Topic top = new Topic();
-
                         top.setId(json.getInt("id"));
                         top.setClickcount(json.getInt("clickcount"));
                         top.setContent(json.getString("content"));

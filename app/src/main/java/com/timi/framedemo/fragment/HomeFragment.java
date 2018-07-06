@@ -7,9 +7,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 import com.timi.framedemo.R;
 import com.timi.framedemo.activity.common.CartoonSeek;
@@ -30,8 +30,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener{
 
     private RadioGroup mRgMenu;
 
-    private TextView mRecord;
-    private TextView mSeek;
+    private Button mRecord;
+    private Button mSeek;
     private RadioButton mCollect;
     private RadioButton mRanking;
     private RadioButton mRecommend;
@@ -63,8 +63,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener{
 
         final View view = View.inflate(mContext, R.layout.home_top_menu,null);
         mRgMenu = (RadioGroup)view.findViewById(R.id.rg_second_menu);
-        mSeek = (TextView) view.findViewById(R.id.home_menu_seek);
-        mRecord = (TextView) view.findViewById(R.id.home_menu_record);
+        mSeek = (Button) view.findViewById(R.id.home_menu_seek);
+        mRecord = (Button) view.findViewById(R.id.home_menu_record);
         mRanking = (RadioButton) view.findViewById(R.id.rb_three_ranking);
         mRecommend = (RadioButton) view.findViewById(R.id.rb_three_recommend);
         mCollect = (RadioButton) view.findViewById(R.id.read_collect);
